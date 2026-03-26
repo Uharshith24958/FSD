@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Dashboard</title>
+<style>
+
+body{
+font-family: Arial;
+background:#f4f6f9;
+padding:30px;
+}
+
+h2{
+text-align:center;
+}
+
+.controls{
+margin-bottom:20px;
+display:flex;
+gap:10px;
+justify-content:center;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:white;
+}
+
+th,td{
+padding:10px;
+border:1px solid #ddd;
+text-align:center;
+}
+
+th{
+background:#2c3e50;
+color:white;
+}
+
+button,select{
+padding:8px 12px;
+cursor:pointer;
+}
+
+.countBox{
+margin-top:20px;
+background:white;
+padding:15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h2>Student Data Dashboard</h2>
+
+<div class="controls">
+
+<button onclick="sortByName()">Sort by Name</button>
+
+<button onclick="sortByDate()">Sort by Date</button>
+
+<select id="departmentFilter" onchange="filterDepartment()">
+<option value="All">All Departments</option>
+<option value="CSE">CSE</option>
+<option value="ECE">ECE</option>
+<option value="MECH">MECH</option>
+</select>
+
+</div>
+
+<table id="studentTable">
+
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Department</th>
+<th>Joining Date</th>
+</tr>
+</thead>
+
+<tbody></tbody>
+
+</table>
+
+<div class="countBox">
+<h3>Department Count</h3>
+<ul id="deptCount"></ul>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
